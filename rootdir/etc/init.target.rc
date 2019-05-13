@@ -1,5 +1,8 @@
 on init
     mount none /system/lib/libmtk-ril.so /vendor/lib/libmtk-ril.so bind
+    
+    # Start RIL daemon
+    start ril-daemon
 
     # force properties for mtkmal
     setprop persist.mtk_ims_support 0
